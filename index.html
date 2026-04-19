@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo 应用</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <main class="todo-app">
+      <section class="hero">
+        <p class="eyebrow">Daily Planner</p>
+        <h1>Todo 应用</h1>
+        <p class="subtitle">记录待办、标记完成、随时删除，保持专注与清晰。</p>
+      </section>
+
+      <section class="card input-card">
+        <form id="todo-form" class="todo-form">
+          <input id="todo-input" type="text" placeholder="输入新的待办事项..." autocomplete="off" />
+          <button type="submit">添加</button>
+        </form>
+      </section>
+
+      <section class="card toolbar">
+        <div class="filters" role="tablist" aria-label="筛选待办">
+          <button class="filter active" data-filter="all" type="button">全部</button>
+          <button class="filter" data-filter="active" type="button">待完成</button>
+          <button class="filter" data-filter="completed" type="button">已完成</button>
+        </div>
+        <button id="clear-completed" class="ghost-button" type="button">清除已完成</button>
+      </section>
+
+      <section class="card list-card">
+        <div class="list-header">
+          <h2>待办列表</h2>
+          <span id="todo-count">0 项任务</span>
+        </div>
+        <ul id="todo-list" class="todo-list"></ul>
+        <p id="empty-state" class="empty-state">还没有待办事项，先添加一个吧。</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
